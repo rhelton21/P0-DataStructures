@@ -1,0 +1,43 @@
+### Task 0
+
+This task involves reading the first record of texts and the last record of calls.
+
+**Run Time Analysis**:
+- Reading from a file and storing in a list takes O(N) time where N is the number of records in the file.
+- Accessing the first and last elements of a list is O(1).
+- Overall complexity: O(N).
+
+### Task 1
+
+This task requires counting unique telephone numbers in both texts and calls records.
+
+**Run Time Analysis**:
+- Reading each record and inserting each number into a set takes O(1) average time per number, but there are N total numbers (sum of counts from both files).
+- Overall complexity: O(N).
+
+### Task 2
+
+This task is to find the telephone number that spent the longest time on the phone.
+
+**Run Time Analysis**:
+- Iterating through each call record takes O(N) where N is the number of call records.
+- Updating a dictionary and comparing values take O(1) time per record.
+- Overall complexity: O(N).
+
+### Task 3
+
+The task is to find all the area codes called by Bangalore fixed lines and calculate the percentage of these calls that are local to Bangalore.
+
+**Run Time Analysis**:
+- Iterating through each call record and checking conditions take O(N) where N is the number of call records.
+- Inserting area codes into a set and counting takes O(1) time per record.
+- Overall complexity: O(N).
+
+### Task 4
+
+The objective is to identify numbers that might be telemarketers.
+
+**Run Time Analysis**:
+- Creating sets of numbers that send/receive texts and receive calls is O(N), where N is the total count of text and call records.
+- Identifying outgoing call numbers and finding the difference between sets is O(M), where M is the number of call records.
+- Overall complexity: O(N + M), which simplifies to O(N) if N is the total count of all records.
