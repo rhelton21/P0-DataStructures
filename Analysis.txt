@@ -31,7 +31,10 @@ The task is to find all the area codes called by Bangalore fixed lines and calcu
 **Run Time Analysis**:
 - Iterating through each call record and checking conditions take O(N) where N is the number of call records.
 - Inserting area codes into a set and counting takes O(1) time per record.
-- Overall complexity: O(N).
+- Sorting the set of area codes, if implemented, would take O(k log k) time, where k is the number of unique area codes.
+- The calculation of the percentage of local calls is O(1).
+- Overall complexity: If sorting is used, it would be O(N + k log k). Assuming k << N, this can be approximated to O(N log N).
+
 
 ### Task 4
 
@@ -40,4 +43,6 @@ The objective is to identify numbers that might be telemarketers.
 **Run Time Analysis**:
 - Creating sets of numbers that send/receive texts and receive calls is O(N), where N is the total count of text and call records.
 - Identifying outgoing call numbers and finding the difference between sets is O(M), where M is the number of call records.
-- Overall complexity: O(N + M), which simplifies to O(N) if N is the total count of all records.
+- Finding the difference between sets is O(M) as it involves checking each element in the set of outgoing call numbers against the other sets.
+- If sorting is applied to the final list of telemarketer numbers, it adds O(p log p) complexity, where p is the number of potential telemarketer numbers.
+- Overall complexity: If sorting is used, it would be O(N + k log k). Assuming k << N, this can be approximated to O(N log N).
